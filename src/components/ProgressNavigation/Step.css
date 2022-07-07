@@ -1,0 +1,33 @@
+.test {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border: 3px solid #98c9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  /* padding-left: 30px; */
+}
+.center-text {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.circle.active {
+  /* content: "✔"; */
+  border-color: #1a8cff;
+}
+@media screen and (min-width: 48em) {
+  .container {
+    height: 40vw;
+    margin-left: auto;
+  }
+}

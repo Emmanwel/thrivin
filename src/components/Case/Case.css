@@ -1,0 +1,97 @@
+.case-header {
+  width: 100%;
+  height: 100px;
+  background-image: url(../../assets/home_bg_compressed.webp);
+  background-position: 50% 48%;
+  background-size: cover;
+}
+
+.header-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-image: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0.45),
+    rgb(0, 0, 0, 0.45)
+  );
+}
+.header-font {
+  font-size: var(--chakra-fontSizes-2xl);
+  color: var(--chakra-colors-white);
+  font-weight: var(--chakra-fontWeights-bold);
+  text-align: center;
+}
+/* .case-content {
+  background: var(--chakra-colors-blocks-body);
+  padding-top: 20px;
+} */
+.radius {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.lg-button {
+  width: 50%;
+  /* background: #1f2845; */
+}
+.text-color-gray {
+  color: rgb(99, 99, 102);
+}
+.nav-link {
+  /* height: var(--chakra-sizes-14); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.border-bottom {
+  background: var(--chakra-colors-white);
+  border-bottom: var(--chakra-borders-1px);
+  border-color: #e5e7eb;
+}
+@media screen and (min-width: 30em) {
+  .case-header {
+    height: 190px;
+  }
+  .header-font {
+    font-size: var(--chakra-fontSizes-3xl);
+  }
+}
+@media screen and (min-width: 48em) {
+  .case-header {
+    height: 190px;
+  }
+  .header-font {
+    font-size: var(--chakra-fontSizes-4xl);
+  }
+}
+
+.steps .step-primary + .step-primary:before,
+.steps .step-accent + .step-accent:before,
+.steps .step-primary:after {
+  --tw-bg-opacity: 0;
+  background-color: #5794f7f0;
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.steps .step-accent + .step-accent:before,
+.steps .step-accent:after {
+  --tw-bg-opacity: 1;
+  background-color: #5794f7f0;
+  --tw-text-opacity: 1;
+  color: hsl(var(--ac) / var(--tw-text-opacity));
+}
+.steps-vertical .step {
+  min-height: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 40px 1fr;
+  justify-items: start;
+  gap: 0.2rem;
+}

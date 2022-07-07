@@ -1,0 +1,21 @@
+::root {
+  --sm-font-size: 0.875;
+  --md-font-size: 1rem;
+  --lg-font-size: 1.25rem;
+  --font-weight-bold: 900;
+}
+
+a {
+  text-decoration: inherit !important;
+}
+.text {
+  font-size: var(--sm-font-size) !important;
+}
+.bold-font {
+  font-weight: var(--font-weight-bold) !important;
+}
+.lg-font {
+  font-size: var(--lg-font-size) !important;
+}
+@media screen {
+}
