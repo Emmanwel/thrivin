@@ -1,9 +1,21 @@
 .case-header {
   width: 100%;
   height: 100px;
-  background-image: url(../../assets/home_bg_compressed.webp);
+  background-image: url(../../assets/blurred.jpeg);
   background-position: 50% 48%;
   background-size: cover;
+}
+.disc{
+  font-weight: 700;
+}
+.mods{
+  width: 200px;
+  height: auto;
+}
+
+.trial{
+  width: 78rem;
+  height: auto;
 }
 
 .header-overlay {
@@ -19,7 +31,7 @@
   );
 }
 .header-font {
-  font-size: var(--chakra-fontSizes-2xl);
+  font-size: var(--chakra-fontSizes-3xl);
   color: var(--chakra-colors-white);
   font-weight: var(--chakra-fontWeights-bold);
   text-align: center;
@@ -31,13 +43,20 @@
 .radius {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  
+  
+}
+.foot{
+  height: 90px;
 }
 .lg-button {
-  width: 50%;
+  width: 22px;
+  height: 14px;
   /* background: #1f2845; */
 }
 .text-color-gray {
   color: rgb(99, 99, 102);
+    font-weight: 5000;
 }
 .nav-link {
   /* height: var(--chakra-sizes-14); */

@@ -30,7 +30,7 @@ function ProgressNavigation() {
   const stepsData = [
     {
       stepNumber: "1",
-      stepDetails: "personal information working well",
+      stepDetails: "personal information",
     },
     {
       stepNumber: "2",

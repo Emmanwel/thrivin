@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
-import "./Case.css";
-import { Link } from "react-router-dom";
-import { MdHome } from "react-icons/md";
+import React, { useEffect, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
+import './Case.css'
+import { Link } from 'react-router-dom'
+import { MdHome } from 'react-icons/md'
 import {
   Modal,
   ModalOverlay,
@@ -29,24 +29,24 @@ import {
   SlideFade,
   UnorderedList,
   ListItem,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
 import {
   ArrowForwardIcon,
   CheckCircleIcon,
   ChevronRightIcon,
-} from "@chakra-ui/icons";
+} from '@chakra-ui/icons'
 // import ProgressNavigation from "../ProgressNavigation/ProgressNavigation";
-import FormData from "../FormData/FormData";
-import CaseValue from "../FormData/CaseValue";
+import FormData from '../FormData/FormData'
+import CaseValue from '../FormData/CaseValue'
 function Case() {
-  const isBigScreen = useMediaQuery({ query: "(min-width: 48em)" });
+  const isBigScreen = useMediaQuery({ query: '(min-width: 48em)' })
   useEffect(() => {
-    console.log(isBigScreen);
-  }, [isBigScreen]);
-  const [openModal, setOpenModal] = useState(true);
+    console.log(isBigScreen)
+  }, [isBigScreen])
+  const [openModal, setOpenModal] = useState(true)
   const onClose = () => {
-    setOpenModal(false);
-  };
+    setOpenModal(false)
+  }
   return (
     <div className="case-section">
       <div>
@@ -56,7 +56,7 @@ function Case() {
           </div>
         </Heading>
         <nav className="border-bottom">
-          <Container maxW="container.xl" w={"full"}>
+          <Container maxW="container.xl" w={'full'}>
             {/* <HStack className="nav-stack">
               <Link className="nav-link" to="/">
                 <Icon w={6} h={6} as={MdHome} />
@@ -83,12 +83,12 @@ function Case() {
               </Link>
             </HStack> */}
             <Breadcrumb
-              display={"flex"}
-              flexDirection={"row"}
+              display={'flex'}
+              flexDirection={'row'}
               separator={
                 <svg
                   width="24"
-                  height="44"
+                  height="46"
                   viewBox="0 0 24 44"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -102,6 +102,7 @@ function Case() {
             >
               <BreadcrumbItem>
                 <BreadcrumbLink
+<<<<<<< HEAD
                   display={"flex"}
                   justifyContent={"center"}
                   alignItems={"center"}
@@ -115,10 +116,31 @@ function Case() {
                   paddingInlineStart={"4"}
                   paddingInlineEnd={"4"}
                   h={"10"}
+=======
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  textTransform={'capitalize'}
+                  overflow={'hidden'}
+                  whiteSpace={'nowrap'}
+                  maxW={'4'}
+                  fontSize={'2xl'}
+                  flex={'1 1 0%'}
+                  paddingInlineStart={'4'}
+                  paddingInlineEnd={'4'}
+                  color={'#9f9f9f'}
+                  h={'18'}
+>>>>>>> f0ac4c038764836067762a6c0456294e4368fc1a
                   as={Link}
                   to="/"
+                  onClick={(event) => {
+                    alert(
+                      'Are you sure you want to leave this page? . ' +
+                        'Any unsaved changes will be lost.',
+                    )
+                  }}
                 >
-                  <Icon as={MdHome} />
+                  <Icon as={MdHome} className="style" />
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
@@ -126,18 +148,28 @@ function Case() {
                 <BreadcrumbLink
                   as={Link}
                   to="/case"
-                  display={"flex"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  textTransform={"capitalize"}
-                  overflow={"hidden"}
-                  whiteSpace={"nowrap"}
-                  maxW={"100%"}
-                  fontSize={"sm"}
-                  flex={"1 1 0%"}
-                  paddingInlineStart={"4"}
-                  paddingInlineEnd={"4"}
-                  h={"10"}
+                  onClick={(event) => {
+                    event.preventDefault()
+                    alert(
+                      'Are you sure you want to leave this page?' +
+                        '' +
+                        ' Unsaved changes will be lost',
+                    )
+                  }}
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  textTransform={'capitalize'}
+                  overflow={'hidden'}
+                  whiteSpace={'nowrap'}
+                  maxW={'100%'}
+                  fontSize={'17'}
+                  color={'#9f9f9f'}
+                  fontWeight="600"
+                  flex={'1 1 0%'}
+                  paddingInlineStart={'4'}
+                  paddingInlineEnd={'4'}
+                  h={'10'}
                 >
                   <Text
                   // overflow={"hidden"}
@@ -154,18 +186,20 @@ function Case() {
                 <BreadcrumbLink
                   as={Link}
                   to="/pi"
-                  display={"flex"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  textTransform={"capitalize"}
-                  overflow={"hidden"}
-                  whiteSpace={"nowrap"}
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  textTransform={'capitalize'}
+                  overflow={'hidden'}
+                  whiteSpace={'nowrap'}
                   // maxW={"14"}
-                  fontSize={"sm"}
+                  fontSize={'17'}
                   // flex={"1 1 0%"}
-                  paddingInlineStart={"4"}
-                  paddingInlineEnd={"4"}
-                  h={"10"}
+                  paddingInlineStart={'4'}
+                  paddingInlineEnd={'4'}
+                  h={'10'}
+                  color={'#9f9f9f'}
+                  fontWeight="600"
                 >
                   <Text
                   // overflow={"hidden"}
@@ -209,9 +243,9 @@ function Case() {
           </Container>
         </nav>
         <Flex
-          background={"#F2F4F7"}
-          direction={{ base: "column", md: "row" }}
-          pt={"4"}
+          background={'#F2F4F7'}
+          direction={{ base: 'column', md: 'row' }}
+          pt={'4'}
         >
           {/* <ProgressNavigation /> */}
           {/* <StepperProgress /> */}
@@ -246,7 +280,7 @@ function Case() {
           </Show> */}
           <Box
             as="aside"
-            maxW={{ sm: "full", md: "sm", lg: "md" }}
+            maxW={{ sm: 'full', md: 'sm', lg: 'md' }}
             flex="1 1 0%"
           >
             <SlideFade
@@ -261,97 +295,97 @@ function Case() {
               initial="exit"
             >
               <UnorderedList
-                spacing={"0"}
+                spacing={'0'}
                 display="flex"
-                flexDir={{ base: "row", sm: "row", md: "column" }}
+                flexDir={{ base: 'row', sm: 'row', md: 'column' }}
                 justifyContent="center"
-                pt={"4"}
+                pt={'4'}
                 pb="4"
-                position={"relative"}
+                position={'relative'}
                 height="fit-content"
-                paddingInlineStart={"4"}
-                paddingInlineEnd={"4"}
+                paddingInlineStart={'4'}
+                paddingInlineEnd={'4'}
                 zIndex="1"
               >
                 <ListItem
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
-                  flexDir={"row"}
+                  flexDir={'row'}
                   zIndex="1"
                 >
                   <Box>
                     <Box
-                      color={"#276EF1"}
+                      color={'#276EF1'}
                       w="8"
-                      h={"8"}
+                      h={'8'}
                       display="flex"
-                      justifyContent={"center"}
+                      justifyContent={'center'}
                       alignItems="center"
-                      borderRadius={"full"}
+                      borderRadius={'full'}
                       border="2px"
                       background="white"
-                      cursor={"pointer"}
+                      cursor={'pointer'}
                     >
-                      <CheckCircleIcon color={"currentColor"}></CheckCircleIcon>
+                      <CheckCircleIcon color={'currentColor'}></CheckCircleIcon>
                     </Box>
                   </Box>
                   <Text
-                    display={["none", "none", "block"]}
+                    display={['none', 'none', 'block']}
                     textTransform="uppercase"
-                    ml={"2"}
+                    ml={'2'}
                     pl="2"
-                    flex={"1 1 0%"}
+                    flex={'1 1 0%'}
                     fontSize="12px"
-                    color={"gray.900"}
+                    color={'gray.900'}
                     fontWeight="bold"
-                    cursor={"pointer"}
+                    cursor={'pointer'}
                   >
                     Personal Information
                   </Text>
                 </ListItem>
                 <Box
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
                   justifyContent={{
-                    base: "center",
-                    sm: "center",
-                    md: "flex-start",
+                    base: 'center',
+                    sm: 'center',
+                    md: 'flex-start',
                   }}
-                  flex={"1 1 0%"}
+                  flex={'1 1 0%'}
                 >
                   <Box
-                    bg={"#276EF1"}
-                    h={{ base: "0.5", sm: "0.5", md: "10" }}
-                    w={{ base: "full", sm: "full", md: "0.5" }}
-                    ml={{ base: "0px", sm: "0px", md: "4" }}
+                    bg={'#276EF1'}
+                    h={{ base: '0.5', sm: '0.5', md: '10' }}
+                    w={{ base: 'full', sm: 'full', md: '0.5' }}
+                    ml={{ base: '0px', sm: '0px', md: '4' }}
                   ></Box>
                 </Box>
                 <ListItem
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
-                  flexDir={"row"}
+                  flexDir={'row'}
                   zIndex="1"
                 >
                   <Box>
                     <Box
-                      color={"#276EF1"}
+                      color={'#276EF1'}
                       w="8"
-                      h={"8"}
+                      h={'8'}
                       display="flex"
-                      justifyContent={"center"}
+                      justifyContent={'center'}
                       alignItems="center"
-                      borderRadius={"full"}
+                      borderRadius={'full'}
                       border="2px"
                       background="white"
-                      cursor={"pointer"}
+                      cursor={'pointer'}
                     >
                       <Icon
                         viewBox="0 0 11 10"
-                        color={"currentColor"}
+                        color={'currentColor'}
                         verticalAlign="middle"
                         w="8"
                         h="8"
-                        padding={"2"}
+                        padding={'2'}
                       >
                         <circle
                           cx="5.5"
@@ -363,168 +397,168 @@ function Case() {
                     </Box>
                   </Box>
                   <Text
-                    display={["none", "none", "block"]}
+                    display={['none', 'none', 'block']}
                     textTransform="uppercase"
-                    ml={"2"}
+                    ml={'2'}
                     pl="2"
-                    flex={"1 1 0%"}
+                    flex={'1 1 0%'}
                     fontSize="12px"
-                    color={"gray.900"}
+                    color={'gray.900'}
                     fontWeight="bold"
-                    cursor={"pointer"}
+                    cursor={'pointer'}
                   >
                     Date
                   </Text>
                 </ListItem>
                 <Box
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
                   justifyContent={{
-                    base: "center",
-                    sm: "center",
-                    md: "flex-start",
+                    base: 'center',
+                    sm: 'center',
+                    md: 'flex-start',
                   }}
-                  flex={"1 1 0%"}
+                  flex={'1 1 0%'}
                 >
                   <Box
-                    bg={"#276EF1"}
-                    h={{ base: "0.5", sm: "0.5", md: "10" }}
-                    w={{ base: "full", sm: "full", md: "0.5" }}
-                    ml={{ base: "0px", sm: "0px", md: "4" }}
+                    bg={'#276EF1'}
+                    h={{ base: '0.5', sm: '0.5', md: '10' }}
+                    w={{ base: 'full', sm: 'full', md: '0.5' }}
+                    ml={{ base: '0px', sm: '0px', md: '4' }}
                   ></Box>
                 </Box>
                 <ListItem
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
-                  flexDir={"row"}
+                  flexDir={'row'}
                   zIndex="1"
                 >
                   <Box>
                     <Box
-                      color={"#276EF1"}
+                      color={'#276EF1'}
                       w="8"
-                      h={"8"}
+                      h={'8'}
                       display="flex"
-                      justifyContent={"center"}
+                      justifyContent={'center'}
                       alignItems="center"
-                      borderRadius={"full"}
+                      borderRadius={'full'}
                       border="2px"
                       background="white"
-                      cursor={"pointer"}
+                      cursor={'pointer'}
                     ></Box>
                   </Box>
                   <Text
-                    display={["none", "none", "block"]}
+                    display={['none', 'none', 'block']}
                     textTransform="uppercase"
-                    ml={"2"}
+                    ml={'2'}
                     pl="2"
-                    flex={"1 1 0%"}
+                    flex={'1 1 0%'}
                     fontSize="12px"
-                    color={"gray.900"}
+                    color={'gray.900'}
                     fontWeight="bold"
-                    cursor={"pointer"}
+                    cursor={'pointer'}
                   >
                     Passenger or driver
                   </Text>
                 </ListItem>
                 <Box
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
                   justifyContent={{
-                    base: "center",
-                    sm: "center",
-                    md: "flex-start",
+                    base: 'center',
+                    sm: 'center',
+                    md: 'flex-start',
                   }}
-                  flex={"1 1 0%"}
+                  flex={'1 1 0%'}
                 >
                   <Box
-                    bg={"#276EF1"}
-                    h={{ base: "0.5", sm: "0.5", md: "10" }}
-                    w={{ base: "full", sm: "full", md: "0.5" }}
-                    ml={{ base: "0px", sm: "0px", md: "4" }}
+                    bg={'#276EF1'}
+                    h={{ base: '0.5', sm: '0.5', md: '10' }}
+                    w={{ base: 'full', sm: 'full', md: '0.5' }}
+                    ml={{ base: '0px', sm: '0px', md: '4' }}
                   ></Box>
                 </Box>
                 <ListItem
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
-                  flexDir={"row"}
+                  flexDir={'row'}
                   zIndex="1"
                 >
                   <Box>
                     <Box
-                      color={"#276EF1"}
+                      color={'#276EF1'}
                       w="8"
-                      h={"8"}
+                      h={'8'}
                       display="flex"
-                      justifyContent={"center"}
+                      justifyContent={'center'}
                       alignItems="center"
-                      borderRadius={"full"}
+                      borderRadius={'full'}
                       border="2px"
                       background="white"
-                      cursor={"pointer"}
+                      cursor={'pointer'}
                     ></Box>
                   </Box>
                   <Text
-                    display={["none", "none", "block"]}
+                    display={['none', 'none', 'block']}
                     textTransform="uppercase"
-                    ml={"2"}
+                    ml={'2'}
                     pl="2"
-                    flex={"1 1 0%"}
+                    flex={'1 1 0%'}
                     fontSize="12px"
-                    color={"gray.900"}
+                    color={'gray.900'}
                     fontWeight="bold"
-                    cursor={"pointer"}
+                    cursor={'pointer'}
                   >
                     Accident Details
                   </Text>
                 </ListItem>
                 <Box
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
                   justifyContent={{
-                    base: "center",
-                    sm: "center",
-                    md: "flex-start",
+                    base: 'center',
+                    sm: 'center',
+                    md: 'flex-start',
                   }}
-                  flex={"1 1 0%"}
+                  flex={'1 1 0%'}
                 >
                   <Box
-                    bg={"#276EF1"}
-                    h={{ base: "0.5", sm: "0.5", md: "10" }}
-                    w={{ base: "full", sm: "full", md: "0.5" }}
-                    ml={{ base: "0px", sm: "0px", md: "4" }}
+                    bg={'#276EF1'}
+                    h={{ base: '0.5', sm: '0.5', md: '10' }}
+                    w={{ base: 'full', sm: 'full', md: '0.5' }}
+                    ml={{ base: '0px', sm: '0px', md: '4' }}
                   ></Box>
                 </Box>
                 <ListItem
-                  display={"flex"}
+                  display={'flex'}
                   alignItems="center"
-                  flexDir={"row"}
+                  flexDir={'row'}
                   zIndex="1"
                 >
                   <Box>
                     <Box
-                      color={"#276EF1"}
+                      color={'#276EF1'}
                       w="8"
-                      h={"8"}
+                      h={'8'}
                       display="flex"
-                      justifyContent={"center"}
+                      justifyContent={'center'}
                       alignItems="center"
-                      borderRadius={"full"}
+                      borderRadius={'full'}
                       border="2px"
                       background="white"
-                      cursor={"pointer"}
+                      cursor={'pointer'}
                     ></Box>
                   </Box>
                   <Text
-                    display={["none", "none", "block"]}
+                    display={['none', 'none', 'block']}
                     textTransform="uppercase"
-                    ml={"2"}
+                    ml={'2'}
                     pl="2"
-                    flex={"1 1 0%"}
+                    flex={'1 1 0%'}
                     fontSize="12px"
-                    color={"gray.900"}
+                    color={'gray.900'}
                     fontWeight="bold"
-                    cursor={"pointer"}
+                    cursor={'pointer'}
                   >
                     Property Damage
                   </Text>
@@ -533,12 +567,12 @@ function Case() {
             </SlideFade>
           </Box>
 
-          <Container pt={["4", "4", "0"]}>
+          <Container pt={['4', '4', '0']}>
             <CaseValue />
             <Container
-              background={"white"}
+              background={'white'}
               borderRadius="lg"
-              p={{ base: "6", md: "8", lg: "8" }}
+              p={{ base: '6', md: '8', lg: '8' }}
               mt={6}
               mb={6}
             >
@@ -547,11 +581,21 @@ function Case() {
           </Container>
         </Flex>
       </div>
-      <Modal isCentered isOpen={openModal} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
+      <Modal
+        isCentered
+        isOpen={openModal}
+        onClose={onClose}
+        className="mods"
+        size={'2xl'}
+      >
+        <ModalOverlay
+          bg="blackAlpha.500"
+          backdropFilter="blur(15px)"
+          backdropContrast="65px"
+        />
+        <ModalContent className="trial">
           <ModalBody className="radius" background="rgb(227, 221, 204)">
-            <Text fontWeight="bold" fontSize="xl" className="bold-font">
+            <Text fontWeight="bold" fontSize="xl" className="disc">
               Disclaimer
             </Text>
             <Text className="text-color-gray">
@@ -565,15 +609,16 @@ function Case() {
             </Text>
           </ModalBody>
 
-          <ModalFooter>
+          <ModalFooter className="foot">
             <Button
               background="#1F2845;"
-              className="lg-button"
+              className="bbs"
               rightIcon={<ArrowForwardIcon />}
               colorScheme="blue"
-              mr={3}
+              mr={0}
               onClick={onClose}
-              size="lg"
+              height={'55'}
+              width={'32'}
             >
               Ok
             </Button>
@@ -581,7 +626,7 @@ function Case() {
         </ModalContent>
       </Modal>
     </div>
-  );
+  )
 }
 
-export default Case;
+export default Case
