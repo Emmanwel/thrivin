@@ -111,6 +111,7 @@ function Case() {
                   maxW={"4"}
                   fontSize={"sm"}
                   flex={"1 1 0%"}
+                  fontWeight={600}
                   paddingInlineStart={"4"}
                   paddingInlineEnd={"4"}
                   h={"10"}
@@ -153,6 +154,34 @@ function Case() {
                 <BreadcrumbLink
                   as={Link}
                   to="/pi"
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  textTransform={"capitalize"}
+                  overflow={"hidden"}
+                  whiteSpace={"nowrap"}
+                  // maxW={"14"}
+                  fontSize={"sm"}
+                  // flex={"1 1 0%"}
+                  paddingInlineStart={"4"}
+                  paddingInlineEnd={"4"}
+                  h={"10"}
+                >
+                  <Text
+                  // overflow={"hidden"}
+                  // textOverflow={"ellipsis"}
+                  // whiteSpace={"nowrap"}
+                  // maxW={"10"}
+                  >
+                    Personal Information
+                  </Text>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+
+              <BreadcrumbItem isCurrentPage>
+                <BreadcrumbLink
+                  as={Link}
+                  to="/profile"
                   display={"flex"}
                   justifyContent={"center"}
                   alignItems={"center"}
